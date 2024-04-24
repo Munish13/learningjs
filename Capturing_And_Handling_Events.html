@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="myButton">Click me!</button>
+  <p id="myElement">Hover over me!</p>
+
+  <button id="new-button">New Butto</button>
+  <p id="new-element"></p>
+</body>
+<script>
+    const newButton = document.getElementById("new-button");
+    const newElement = document.getElementById("new-element");
+    newButton.addEventListener("click", function(){
+        
+        newElement.textContent = "Hello World";
+        
+    })
+  const myButton = document.getElementById("myButton");
+
+  myButton.addEventListener("click", function(event) {
+    // Prevent the default behavior of the button
+    event.preventDefault();
+  
+    // Log a message to the console
+    console.log("Button clicked!");
+  
+    // Update the text of the button
+    myButton.textContent = "Clicked!";
+  
+    // Add a CSS class to the button
+    myButton.classList.add("clicked");
+  
+    // Trigger another function
+    doSomethingElse();
+  });
+
+  function doSomethingElse() {
+    // get the element with id "myElement"
+    const myElement = document.getElementById("myElement");
+  
+    // add an event listener for the "mouseover" event
+    myElement.addEventListener("mouseover", function(event) {
+      // change the background color to blue
+      myElement.style.backgroundColor = "blue";
+    });
+  
+    // add an event listener for the "mouseout" event
+    myElement.addEventListener("mouseout", function(event) {
+      // change the background color back to white
+      myElement.style.backgroundColor = "white";
+    });
+  }
+
+  // Do something else here
+</script>
+</html>
