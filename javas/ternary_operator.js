@@ -15,3 +15,9 @@ const totalMarks = 60;
 const result = totalMarks < 40 ? "you should work hard" : "you passed congo";
 
 console.log(result);
+
+const result2 = totalMarks < 40 ? "tou should work hard" 
+: totalMarks < 60 ? "B grade" : totalMarks < 75 ? "A grade" 
+:totalMarks < 85 ? "A+" : "Genius";
+
+console.log(result2);

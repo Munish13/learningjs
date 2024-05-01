@@ -1,0 +1,51 @@
+git init
+The git init command is used to start a new repository. It creates a new .git subdirectory in your current working directory. This subdirectory contains all the necessary metadata for the new repository.
+
+$ git init
+git clone
+The git clone command is used to create a copy of an existing repository. This command takes the URL of the repository as an argument.
+
+$ git clone https://github.com/user/repo.git
+git status
+The git status command shows the status of the working directory and the staging area. It lists out all the files that have been modified, staged, and untracked.
+
+$ git status
+git add
+The git add command is used to stage changes for the next commit. You can add specific files or all changes at once.
+
+You can't use 'macro parameter character #' in math mode
+ git add .              # add all changes
+git commit
+The git commit command saves the staged changes to the local repository. Usually, it is followed by -m to add a commit message describing what changes have been made.
+
+$ git commit -m "Add a meaningful message here"
+git diff
+The git diff command shows the differences between the working directory and the staging area. This can be useful to see what changes have been made but not yet staged.
+
+$ git diff
+git log
+The git log command displays the commit history. It lists out all the commits that have been made in reverse chronological order.
+
+$ git log
+git pull
+The git pull command fetches changes from the remote repository and merges them into the current branch of your local repository.
+
+$ git pull origin main
+git push
+The git push command is used to push committed changes to the remote repository.
+
+$ git push origin main
+git branch
+The git branch command is used to manage branches. Without any arguments, it lists all the branches in your repository. To create a new branch, you'd include the name of the new branch as an argument.
+
+You can't use 'macro parameter character #' in math mode
+ git branch feature_x    # create a new branch named 'feature_x'
+git checkout
+The git checkout command is used to switch between different branches and tags in the repository. It can also be used to create a new branch and switch to it simultaneously using the -b option.
+
+You can't use 'macro parameter character #' in math mode
+ git checkout -b feature_y # create and switch to 'feature_y' branch
+git merge
+The git merge command is used to merge changes from one branch into another. It takes the name of the branch that you want to merge as an argument.
+
+$ git merge feature_x
