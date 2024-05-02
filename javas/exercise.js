@@ -47,13 +47,42 @@ const symbol = "* ";
 // }
 
 
-const inputstring = "I love my india";
+// const inputstring = "I love my india";
 
-let vowel = "aeiou";
-for(let i = 0; i<inputstring.length; i++){
-    if(vowel.includes(inputstring[i])){
-        console.log(`${inputstring[i]} is a vowel`);
-    }else{
-        console.log(`${inputstring[i]} is not a vowel`);
-    }
+// let vowel = "aeiou";
+// for(let i = 0; i<inputstring.length; i++){
+//     if(vowel.includes(inputstring[i])){
+//         console.log(`${inputstring[i]} is a vowel`);
+//     }else{
+//         console.log(`${inputstring[i]} is not a vowel`);
+//     }
+// }
+
+// function firstDigit(num) {
+//     while (num >= 10) {
+//         num /= 10
+//     }
+//     return Math.floor(num); 
+
+    
+// }
+// console.log(firstDigit(219));
+
+let sum = 0;
+const n = 100;
+
+for (let i = 1; i <= n; i++){
+    // += i;
+    let valueof = i;
+    //console.log(valueof+sum);
 }
+
+//console.log(`sum: ${sum}`);
+
+function foo(bar){
+    bar = bar ?? 55;
+    console.log(bar);
+    console.log("-");
+}
+foo();
+foo(22);
