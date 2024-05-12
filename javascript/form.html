@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div#error {
+    color: red;
+    font-size: 16px ! IMPORTANT;
+    margin-bottom: 20px;
+}
+</style>
+<body>
+    <form action="thankyou.html">
+        <label for="username">Name*</label>
+        <input type="text" id="username"><br><br>
+        <label for="email">Email*</label>
+        <input type="email" id="email"><br><br>
+        <label for="password">Password*</label>
+        <input type="password" id="password"><br><br>
+        <label for="confirmPassword">Confirm Password*</label>
+        <input type="password" id="confirmPassword"><br><br>
+        <div id="error"></div>
+        <input onclick="formValidation()" type="button" value="Submit" id="submit-btn">
+    </form>
+    <script>
+        function formValidation() {
+            let usernameVal = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        
+            if(usernameVal == "" || email == "" || password == "" || confirmPassword == ""){
+                let mainerror = "all fields are mendetry"; 
+                document.getElementById("error").innerText = mainerror;
+            }else{
+                true
+            }
+
+            if(validRegex.test(email)){
+                
+            }else{
+                let emailError = "Please enter valid email address"; 
+                document.getElementById("error").innerText = emailError;
+            }
+
+            if (password.length < 8) {
+                let passwordErr = "Password is too short password should be greater then 8"; 
+                document.getElementById("error").innerText = passwordErr; 
+            }else{
+                true;
+            }
+            
+            if(password != confirmPassword){
+                document.getElementById("error").innerText = "Password not matched";
+            }else{
+                true;
+            }
+        }
+
+        
+        
+    </script>
+</body>
+</html>
