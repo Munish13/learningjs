@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .todoapp{
+        height: 100vh;
+        width: 100vw;
+        background-color: antiquewhite;
+    }
+    form#todoForm {
+    text-align: center;
+    padding: 20px;
+}
+input#todoInput {
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 10%;
+    padding: 5px 20px;
+}
+button#addTodo {
+    height: 30px;
+    width: 100%;
+    max-width: 100px;
+}
+</style>
+<body>
+    <div class="todoapp">
+        <form id="todoForm">
+            <input type="text" id="todoInput">
+            <button id="addTodo">Add</button>
+        </form>
+        <div class="todoOutput">
+            <ul id="ourTodoList">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    let form = document.getElementById("todoForm");
+    let inputData = document.getElementById("todoInput");
+    let ourStorage = document.querySelector("#ourTodoList");
+
+    form.addEventListener("submit", (e)=>{
+        let inputValue = inputData.value;
+        let ourData = [];
+        let storeInLocal = localStorage.setItem("todo" , ourData);
+        
+        let getLocalData = localStorage.getItem("todo");
+        
+    });
+
+    ourStorage.innerHTML = (`<li> ${getLocalData} </li>`);
+</script>
+</html>

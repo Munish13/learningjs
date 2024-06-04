@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grandparent{
+        border: 2px solid #000000;
+        height: 300px;
+        width: 300px;
+    }
+    .parent{
+        border: 2px solid blue;
+        height: 200px;
+        width: 200px;
+    }
+    .child{
+        border: 2px solid red;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let box = document.querySelector(".grandparent");
+    box.classList.add("ricky")
+    document.querySelector(".grandparent").addEventListener("click", (e)=>{
+        e.stopPropagation();
+        //console.log(e.target);
+        let element = e.target;
+        console.log(element.classList[0])
+    });
+    // document.querySelector(".parent").addEventListener("click", (e)=>{
+    //     e.stopPropagation();
+    //     console.log("parent clicked");
+    // });
+    // document.querySelector(".child").addEventListener("click", (e)=>{
+    //     e.stopPropagation();
+    //     console.log("child clicked");
+    // });
+</script>
+</html>

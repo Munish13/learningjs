@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="size">0</div>
+    <div id="size1">0</div>
+</body>
+<script>
+    const elm2 = document.getElementById("size1");
+    elm2.innerText = window.outerWidth;
+    const elm = document.getElementById("size");
+    elm.innerText = window.innerWidth;
+    window.addEventListener("resize", (event) => {
+        // onresize = () => {
+
+        elm.innerText = window.innerWidth;
+
+        // console.log("Hello##",  window.outerWidth); 
+        // };
+
+    });
+
+
+</script>
+
+</html>

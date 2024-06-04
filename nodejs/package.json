@@ -1,0 +1,11 @@
+{
+  "name": "sum",
+  "version": "1.0.0",
+  "description": "will do sum of 2 numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "",
+  "license": "ISC"
+}
