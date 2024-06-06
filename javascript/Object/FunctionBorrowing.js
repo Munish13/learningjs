@@ -1,11 +1,11 @@
 /**
- * Function Borrowing
+ * Function Borrowing  // always assing to a variable bind method
  */
 
 const person1 = {
     name: "dinesh",
     age: 26,
-    greet : function (){
+    greet: function () {
         console.log(`My name is ${this.name} and my age is ${this.age}`);
     }
 }
