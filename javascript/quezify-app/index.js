@@ -1,0 +1,7 @@
+/**
+ * database
+ */
+
+const database = {
+
+}
