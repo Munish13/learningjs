@@ -14,7 +14,7 @@ const employees = [
     },
     {
         name: "Nisha",
-        numOfYears: 2
+        numOfYears: 6
     },
     {
         name: "Rudra",
@@ -30,9 +30,9 @@ const employees = [
     }
 ]
 
-const result = employees.filter((employee) => {
-    let result2 = employee.numOfYears > 3;
-    return result2
-});
-
+// const result = employees.filter((employee) => {
+//     let result2 = employee.numOfYears > 3;
+//     return result2
+// });
+const result = employees.filter((employee) => employee.numOfYears > 3).map((employee) => employee.name);
 console.log(result);
